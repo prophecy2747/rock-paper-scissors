@@ -1,58 +1,57 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Page Title</title>
+  <title>Rock Paper Scissors </title>
 </head>
 <body>
-  <script>
-    
-    let computerChoice = Math.floor(Math.random()*3);
-    document.getElementById("R").addEventListener("click", rock(computerChoice));
-    document.getElementById("P").addEventListener("click", paper(computerChoice));
-    document.getElementById("S").addEventListener("click", scissors(computerChoice));
-    
-    
-    
-    function rock(c){
-        switch(c){
-                case 0: document.getElementById("result").innerhtml="You chose ROCK and Computer chose ROCK so TIE";
-                        break;
-                case 1: document.getElementById("result").innerhtml="You chose ROCK and Computer chose PAPER so YOU LOSE";
-                        break;
-                case 2: document.getElementById("result").innerhtml="You chose ROCK and Computer chose SCISSORS so YOU WIN";
-                        break;
-        }
-    }
 
-    function paper(c){
-        switch(c){
-                case 0: document.getElementById("result").innerhtml="You chose PAPER and Computer chose ROCK so YOU WIN";
-                        break;
-                case 1: document.getElementById("result").innerhtml="You chose PAPER and Computer chose PAPER so TIE";
-                        break;
-                case 2: document.getElementById("result").innerhtml="You chose PAPER and Computer chose SCISSORS so YOU LOSE";
-                        break;
+        <input type="button" value="Rock" id="b1" onclick="rock();"/>
+        <input type="button" value="Paper" id="b2" onclick="paper();"/>
+        <input type="button" value="Scissors" id="b3" onclick="scissors();"/>
+        <br><br><br><br>
+        <p id="result"></p>
+        <script>
+        
+        let c = Math.floor(Math.random()*3);
+    
+    
+    
+        function rock(){
+                switch(c){
+                        case 0: document.getElementById('result').innerHTML ="You chose ROCK and Computer chose ROCK so TIE";
+                                break;
+                        case 1: document.getElementById("result").innerHTML="You chose ROCK and Computer chose PAPER so YOU LOSE";
+                                break;
+                        case 2: document.getElementById("result").innerHTML="You chose ROCK and Computer chose SCISSORS so YOU WIN";
+                                break;
+                }
         }
-    }
 
-    function scissors(c){
-        switch(c){
-                case 0: document.getElementById("result").innerhtml="You chose SCISSORS and Computer chose ROCK so YOU LOSE";
-                        break;
-                case 1: document.getElementById("result").innerhtml="You chose SCISSORS and Computer chose PAPER so YOU WIN";
-                        break;
-                case 2: document.getElementById("result").innerhtml="You chose SCISSORS and Computer chose SCISSORS so TIE";
-                        break;
+        function paper(){
+                switch(c){
+                        case 0: document.getElementById("result").innerHTML="You chose PAPER and Computer chose ROCK so YOU WIN";
+                                break;
+                        case 1: document.getElementById("result").innerHTML="You chose PAPER and Computer chose PAPER so TIE";
+                                break;
+                        case 2: document.getElementById("result").innerHTML="You chose PAPER and Computer chose SCISSORS so YOU LOSE";
+                                break;
+                }
         }
-    }
+
+        function scissors(){
+                switch(c){
+                        case 0: document.getElementById("result").innerHTML="You chose SCISSORS and Computer chose ROCK so YOU LOSE";
+                                break;
+                        case 1: document.getElementById("result").innerHTML="You chose SCISSORS and Computer chose PAPER so YOU WIN";
+                                break;
+                        case 2: document.getElementById("result").innerHTML="You chose SCISSORS and Computer chose SCISSORS so TIE";
+                                break;
+                }
+        }
 
 
     
   </script>
-  <button id="R" type="button">Rock</button> <button id="P" type="button">Paper</button> <button id="S" type="button">Scissors</button>
-  <br><br><br><br>
-  <div id="result">
-
-  </div>
+  
 </body>
 </html>
